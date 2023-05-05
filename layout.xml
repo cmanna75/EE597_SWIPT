@@ -1,0 +1,483 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<scenario name="/tmp/tmptxq3_j52">
+  <networks/>
+  <devices>
+    <device id="1" name="n1" icon="/home/ee597/EE597_SWIPT/icons/relay.jpeg" type="PC" class="" image="">
+      <position x="166.6699981689453" y="166.6699981689453" lat="47.578964415489445" lon="-122.13202477433647" alt="2.0"/>
+      <services>
+        <service name="DefaultRoute"/>
+      </services>
+    </device>
+    <device id="2" name="n2" icon="/home/ee597/EE597_SWIPT/icons/relay.jpeg" type="PC" class="" image="">
+      <position x="500.0" y="166.6699981689453" lat="47.578964415489445" lon="-122.13142590346587" alt="2.0"/>
+      <services>
+        <service name="DefaultRoute"/>
+      </services>
+    </device>
+    <device id="3" name="n3" icon="/home/ee597/EE597_SWIPT/icons/relay.jpeg" type="PC" class="" image="">
+      <position x="833.3300170898438" y="166.6699981689453" lat="47.578964415489445" lon="-122.13082703256786" alt="2.0"/>
+      <services>
+        <service name="DefaultRoute"/>
+      </services>
+    </device>
+    <device id="4" name="n4" icon="/home/ee597/EE597_SWIPT/icons/relay.jpeg" type="PC" class="" image="">
+      <position x="166.6699981689453" y="500.0" lat="47.578560431536346" lon="-122.13202477433647" alt="2.0"/>
+      <services>
+        <service name="DefaultRoute"/>
+      </services>
+    </device>
+    <device id="5" name="n5" icon="/home/ee597/EE597_SWIPT/icons/relay.jpeg" type="PC" class="" image="">
+      <position x="500.0" y="500.0" lat="47.578560431536346" lon="-122.13142590346587" alt="2.0"/>
+      <services>
+        <service name="DefaultRoute"/>
+      </services>
+    </device>
+    <device id="6" name="n6" icon="/home/ee597/EE597_SWIPT/icons/relay.jpeg" type="PC" class="" image="">
+      <position x="833.3300170898438" y="500.0" lat="47.578560431536346" lon="-122.13082703256786" alt="2.0"/>
+      <services>
+        <service name="DefaultRoute"/>
+      </services>
+    </device>
+    <device id="7" name="n7" icon="/home/ee597/EE597_SWIPT/icons/relay.jpeg" type="PC" class="" image="">
+      <position x="166.6699981689453" y="833.3300170898438" lat="47.57815644444764" lon="-122.13202477433647" alt="2.0"/>
+      <services>
+        <service name="DefaultRoute"/>
+      </services>
+    </device>
+    <device id="8" name="n8" icon="/home/ee597/EE597_SWIPT/icons/relay.jpeg" type="PC" class="" image="">
+      <position x="500.0" y="833.3300170898438" lat="47.57815644444764" lon="-122.13142590346587" alt="2.0"/>
+      <services>
+        <service name="DefaultRoute"/>
+      </services>
+    </device>
+    <device id="9" name="n9" icon="/home/ee597/EE597_SWIPT/icons/relay.jpeg" type="PC" class="" image="">
+      <position x="833.3300170898438" y="833.3300170898438" lat="47.57815644444764" lon="-122.13082703256786" alt="2.0"/>
+      <services>
+        <service name="DefaultRoute"/>
+      </services>
+    </device>
+    <device id="10" name="n10" icon="/home/ee597/EE597_SWIPT/icons/sink.jpg" type="PC" class="" image="">
+      <position x="1000.0" y="1000.0" lat="47.57795444370553" lon="-122.13052758818174" alt="2.0"/>
+      <services>
+        <service name="DefaultRoute"/>
+      </services>
+    </device>
+
+    <device id="11" name="n11" icon="/home/ee597/EE597_SWIPT/icons/zebra.jpeg" type="PC" class="" image="">
+      <position x="164" y="922" lat="47.57795444370553" lon="-122.13052758818174" alt="2.0"/>
+      <services>
+        <service name="DefaultRoute"/>
+      </services>
+    </device>
+    <device id="12" name="n12" icon="/home/ee597/EE597_SWIPT/icons/zebra.jpeg" type="PC" class="" image="">
+      <position x="202" y="427" lat="47.57795444370553" lon="-122.13052758818174" alt="2.0"/>
+      <services>
+        <service name="DefaultRoute"/>
+      </services>
+    </device>
+    <device id="13" name="n13" icon="/home/ee597/EE597_SWIPT/icons/zebra.jpeg" type="PC" class="" image="">
+      <position x="870" y="534" lat="47.57795444370553" lon="-122.13052758818174" alt="2.0"/>
+      <services>
+        <service name="DefaultRoute"/>
+      </services>
+    </device>
+    <device id="14" name="n14" icon="/home/ee597/EE597_SWIPT/icons/zebra.jpeg" type="PC" class="" image="">
+      <position x="584" y="124" lat="47.57795444370553" lon="-122.13052758818174" alt="2.0"/>
+      <services>
+        <service name="DefaultRoute"/>
+      </services>
+    </device>
+    <device id="15" name="n15" icon="/home/ee597/EE597_SWIPT/icons/zebra.jpeg" type="PC" class="" image="">
+      <position x="793" y="205" lat="47.57795444370553" lon="-122.13052758818174" alt="2.0"/>
+      <services>
+        <service name="DefaultRoute"/>
+      </services>
+    </device>
+    <device id="16" name="n16" icon="/home/ee597/EE597_SWIPT/icons/zebra.jpeg" type="PC" class="" image="">
+      <position x="873" y="213" lat="47.57795444370553" lon="-122.13052758818174" alt="2.0"/>
+      <services>
+        <service name="DefaultRoute"/>
+      </services>
+    </device>
+    <device id="17" name="n17" icon="/home/ee597/EE597_SWIPT/icons/zebra.jpeg" type="PC" class="" image="">
+      <position x="832" y="291" lat="47.57795444370553" lon="-122.13052758818174" alt="2.0"/>
+      <services>
+        <service name="DefaultRoute"/>
+      </services>
+    </device>
+    <device id="18" name="n18" icon="/home/ee597/EE597_SWIPT/icons/zebra.jpeg" type="PC" class="" image="">
+      <position x="214" y="675" lat="47.57795444370553" lon="-122.13052758818174" alt="2.0"/>
+      <services>
+        <service name="DefaultRoute"/>
+      </services>
+    </device>
+    <device id="19" name="n19" icon="/home/ee597/EE597_SWIPT/icons/zebra.jpeg" type="PC" class="" image="">
+      <position x="886" y="346" lat="47.57795444370553" lon="-122.13052758818174" alt="2.0"/>
+      <services>
+        <service name="DefaultRoute"/>
+      </services>
+    </device>
+    <device id="20" name="n20" icon="/home/ee597/EE597_SWIPT/icons/zebra.jpeg" type="PC" class="" image="">
+      <position x="531" y="162" lat="47.57795444370553" lon="-122.13052758818174" alt="2.0"/>
+      <services>
+        <service name="DefaultRoute"/>
+      </services>
+    </device>
+    <device id="21" name="n21" icon="/home/ee597/EE597_SWIPT/icons/zebra.jpeg" type="PC" class="" image="">
+      <position x="448" y="895" lat="47.57795444370553" lon="-122.13052758818174" alt="2.0"/>
+      <services>
+        <service name="DefaultRoute"/>
+      </services>
+    </device>
+    <device id="22" name="n22" icon="/home/ee597/EE597_SWIPT/icons/zebra.jpeg" type="PC" class="" image="">
+      <position x="366" y="399" lat="47.57795444370553" lon="-122.13052758818174" alt="2.0"/>
+      <services>
+        <service name="DefaultRoute"/>
+      </services>
+    </device>
+    <device id="23" name="n23" icon="/home/ee597/EE597_SWIPT/icons/zebra.jpeg" type="PC" class="" image="">
+      <position x="771" y="874" lat="47.57795444370553" lon="-122.13052758818174" alt="2.0"/>
+      <services>
+        <service name="DefaultRoute"/>
+      </services>
+    </device>
+    <device id="24" name="n24" icon="/home/ee597/EE597_SWIPT/icons/zebra.jpeg" type="PC" class="" image="">
+      <position x="176" y="292" lat="47.57795444370553" lon="-122.13052758818174" alt="2.0"/>
+      <services>
+        <service name="DefaultRoute"/>
+      </services>
+    </device>
+    <device id="25" name="n25" icon="/home/ee597/EE597_SWIPT/icons/zebra.jpeg" type="PC" class="" image="">
+      <position x="577" y="133" lat="47.57795444370553" lon="-122.13052758818174" alt="2.0"/>
+      <services>
+        <service name="DefaultRoute"/>
+      </services>
+    </device>
+    <device id="26" name="n26" icon="/home/ee597/EE597_SWIPT/icons/zebra.jpeg" type="PC" class="" image="">
+      <position x="86" y="485" lat="47.57795444370553" lon="-122.13052758818174" alt="2.0"/>
+      <services>
+        <service name="DefaultRoute"/>
+      </services>
+    </device>
+    <device id="27" name="n27" icon="/home/ee597/EE597_SWIPT/icons/zebra.jpeg" type="PC" class="" image="">
+      <position x="711" y="880" lat="47.57795444370553" lon="-122.13052758818174" alt="2.0"/>
+      <services>
+        <service name="DefaultRoute"/>
+      </services>
+    </device>
+    <device id="28" name="n28" icon="/home/ee597/EE597_SWIPT/icons/zebra.jpeg" type="PC" class="" image="">
+      <position x="192" y="771" lat="47.57795444370553" lon="-122.13052758818174" alt="2.0"/>
+      <services>
+        <service name="DefaultRoute"/>
+      </services>
+    </device>
+    <device id="29" name="n29" icon="/home/ee597/EE597_SWIPT/icons/zebra.jpeg" type="PC" class="" image="">
+      <position x="283" y="280" lat="47.57795444370553" lon="-122.13052758818174" alt="2.0"/>
+      <services>
+        <service name="DefaultRoute"/>
+      </services>
+    </device>
+    <device id="30" name="n30" icon="/home/ee597/EE597_SWIPT/icons/zebra.jpeg" type="PC" class="" image="">
+      <position x="585" y="739" lat="47.57795444370553" lon="-122.13052758818174" alt="2.0"/>
+      <services>
+        <service name="DefaultRoute"/>
+      </services>
+    </device>
+    <device id="31" name="n31" icon="/home/ee597/EE597_SWIPT/icons/zebra.jpeg" type="PC" class="" image="">
+      <position x="811" y="306" lat="47.57795444370553" lon="-122.13052758818174" alt="2.0"/>
+      <services>
+        <service name="DefaultRoute"/>
+      </services>
+    </device>
+    <device id="32" name="n32" icon="/home/ee597/EE597_SWIPT/icons/zebra.jpeg" type="PC" class="" image="">
+      <position x="642" y="502" lat="47.57795444370553" lon="-122.13052758818174" alt="2.0"/>
+      <services>
+        <service name="DefaultRoute"/>
+      </services>
+    </device>
+    <device id="33" name="n33" icon="/home/ee597/EE597_SWIPT/icons/zebra.jpeg" type="PC" class="" image="">
+      <position x="923" y="545" lat="47.57795444370553" lon="-122.13052758818174" alt="2.0"/>
+      <services>
+        <service name="DefaultRoute"/>
+      </services>
+    </device>
+    <device id="34" name="n34" icon="/home/ee597/EE597_SWIPT/icons/zebra.jpeg" type="PC" class="" image="">
+      <position x="385" y="404" lat="47.57795444370553" lon="-122.13052758818174" alt="2.0"/>
+      <services>
+        <service name="DefaultRoute"/>
+      </services>
+    </device>
+    <device id="35" name="n35" icon="/home/ee597/EE597_SWIPT/icons/zebra.jpeg" type="PC" class="" image="">
+      <position x="131" y="935" lat="47.57795444370553" lon="-122.13052758818174" alt="2.0"/>
+      <services>
+        <service name="DefaultRoute"/>
+      </services>
+    </device>
+    <device id="36" name="n36" icon="/home/ee597/EE597_SWIPT/icons/zebra.jpeg" type="PC" class="" image="">
+      <position x="10" y="224" lat="47.57795444370553" lon="-122.13052758818174" alt="2.0"/>
+      <services>
+        <service name="DefaultRoute"/>
+      </services>
+    </device>
+    <device id="37" name="n37" icon="/home/ee597/EE597_SWIPT/icons/zebra.jpeg" type="PC" class="" image="">
+      <position x="493" y="680" lat="47.57795444370553" lon="-122.13052758818174" alt="2.0"/>
+      <services>
+        <service name="DefaultRoute"/>
+      </services>
+    </device>
+    <device id="38" name="n38" icon="/home/ee597/EE597_SWIPT/icons/zebra.jpeg" type="PC" class="" image="">
+      <position x="939" y="198" lat="47.57795444370553" lon="-122.13052758818174" alt="2.0"/>
+      <services>
+        <service name="DefaultRoute"/>
+      </services>
+    </device>
+    <device id="39" name="n39" icon="/home/ee597/EE597_SWIPT/icons/zebra.jpeg" type="PC" class="" image="">
+      <position x="589" y="21" lat="47.57795444370553" lon="-122.13052758818174" alt="2.0"/>
+      <services>
+        <service name="DefaultRoute"/>
+      </services>
+    </device>
+    <device id="40" name="n40" icon="/home/ee597/EE597_SWIPT/icons/zebra.jpeg" type="PC" class="" image="">
+      <position x="120" y="418" lat="47.57795444370553" lon="-122.13052758818174" alt="2.0"/>
+      <services>
+        <service name="DefaultRoute"/>
+      </services>
+    </device>
+    <device id="41" name="n41" icon="/home/ee597/EE597_SWIPT/icons/zebra.jpeg" type="PC" class="" image="">
+      <position x="537" y="716" lat="47.57795444370553" lon="-122.13052758818174" alt="2.0"/>
+      <services>
+        <service name="DefaultRoute"/>
+      </services>
+    </device>
+    <device id="42" name="n42" icon="/home/ee597/EE597_SWIPT/icons/zebra.jpeg" type="PC" class="" image="">
+      <position x="78" y="948" lat="47.57795444370553" lon="-122.13052758818174" alt="2.0"/>
+      <services>
+        <service name="DefaultRoute"/>
+      </services>
+    </device>
+    <device id="43" name="n43" icon="/home/ee597/EE597_SWIPT/icons/zebra.jpeg" type="PC" class="" image="">
+      <position x="478" y="265" lat="47.57795444370553" lon="-122.13052758818174" alt="2.0"/>
+      <services>
+        <service name="DefaultRoute"/>
+      </services>
+    </device>
+    <device id="44" name="n44" icon="/home/ee597/EE597_SWIPT/icons/zebra.jpeg" type="PC" class="" image="">
+      <position x="893" y="948" lat="47.57795444370553" lon="-122.13052758818174" alt="2.0"/>
+      <services>
+        <service name="DefaultRoute"/>
+      </services>
+    </device>
+    <device id="45" name="n45" icon="/home/ee597/EE597_SWIPT/icons/zebra.jpeg" type="PC" class="" image="">
+      <position x="158" y="334" lat="47.57795444370553" lon="-122.13052758818174" alt="2.0"/>
+      <services>
+        <service name="DefaultRoute"/>
+      </services>
+    </device>
+    <device id="46" name="n46" icon="/home/ee597/EE597_SWIPT/icons/zebra.jpeg" type="PC" class="" image="">
+      <position x="366" y="365" lat="47.57795444370553" lon="-122.13052758818174" alt="2.0"/>
+      <services>
+        <service name="DefaultRoute"/>
+      </services>
+    </device>
+    <device id="47" name="n47" icon="/home/ee597/EE597_SWIPT/icons/zebra.jpeg" type="PC" class="" image="">
+      <position x="851" y="189" lat="47.57795444370553" lon="-122.13052758818174" alt="2.0"/>
+      <services>
+        <service name="DefaultRoute"/>
+      </services>
+    </device>
+    <device id="48" name="n48" icon="/home/ee597/EE597_SWIPT/icons/zebra.jpeg" type="PC" class="" image="">
+      <position x="213" y="202" lat="47.57795444370553" lon="-122.13052758818174" alt="2.0"/>
+      <services>
+        <service name="DefaultRoute"/>
+      </services>
+    </device>
+    <device id="49" name="n49" icon="/home/ee597/EE597_SWIPT/icons/zebra.jpeg" type="PC" class="" image="">
+      <position x="83" y="76" lat="47.57795444370553" lon="-122.13052758818174" alt="2.0"/>
+      <services>
+        <service name="DefaultRoute"/>
+      </services>
+    </device>
+    <device id="50" name="n50" icon="/home/ee597/EE597_SWIPT/icons/zebra.jpeg" type="PC" class="" image="">
+      <position x="740" y="68" lat="47.57795444370553" lon="-122.13052758818174" alt="2.0"/>
+      <services>
+        <service name="DefaultRoute"/>
+      </services>
+    </device>
+    <device id="51" name="n51" icon="/home/ee597/EE597_SWIPT/icons/zebra.jpeg" type="PC" class="" image="">
+      <position x="901" y="999" lat="47.57795444370553" lon="-122.13052758818174" alt="2.0"/>
+      <services>
+        <service name="DefaultRoute"/>
+      </services>
+    </device>
+    <device id="52" name="n52" icon="/home/ee597/EE597_SWIPT/icons/zebra.jpeg" type="PC" class="" image="">
+      <position x="142" y="656" lat="47.57795444370553" lon="-122.13052758818174" alt="2.0"/>
+      <services>
+        <service name="DefaultRoute"/>
+      </services>
+    </device>
+    <device id="53" name="n53" icon="/home/ee597/EE597_SWIPT/icons/zebra.jpeg" type="PC" class="" image="">
+      <position x="710" y="457" lat="47.57795444370553" lon="-122.13052758818174" alt="2.0"/>
+      <services>
+        <service name="DefaultRoute"/>
+      </services>
+    </device>
+    <device id="54" name="n54" icon="/home/ee597/EE597_SWIPT/icons/zebra.jpeg" type="PC" class="" image="">
+      <position x="108" y="726" lat="47.57795444370553" lon="-122.13052758818174" alt="2.0"/>
+      <services>
+        <service name="DefaultRoute"/>
+      </services>
+    </device>
+    <device id="55" name="n55" icon="/home/ee597/EE597_SWIPT/icons/zebra.jpeg" type="PC" class="" image="">
+      <position x="548" y="862" lat="47.57795444370553" lon="-122.13052758818174" alt="2.0"/>
+      <services>
+        <service name="DefaultRoute"/>
+      </services>
+    </device>
+    <device id="56" name="n56" icon="/home/ee597/EE597_SWIPT/icons/zebra.jpeg" type="PC" class="" image="">
+      <position x="901" y="716" lat="47.57795444370553" lon="-122.13052758818174" alt="2.0"/>
+      <services>
+        <service name="DefaultRoute"/>
+      </services>
+    </device>
+    <device id="57" name="n57" icon="/home/ee597/EE597_SWIPT/icons/zebra.jpeg" type="PC" class="" image="">
+      <position x="811" y="999" lat="47.57795444370553" lon="-122.13052758818174" alt="2.0"/>
+      <services>
+        <service name="DefaultRoute"/>
+      </services>
+    </device>
+    <device id="58" name="n58" icon="/home/ee597/EE597_SWIPT/icons/zebra.jpeg" type="PC" class="" image="">
+      <position x="398" y="25" lat="47.57795444370553" lon="-122.13052758818174" alt="2.0"/>
+      <services>
+        <service name="DefaultRoute"/>
+      </services>
+    </device>
+    <device id="59" name="n59" icon="/home/ee597/EE597_SWIPT/icons/zebra.jpeg" type="PC" class="" image="">
+      <position x="262" y="113" lat="47.57795444370553" lon="-122.13052758818174" alt="2.0"/>
+      <services>
+        <service name="DefaultRoute"/>
+      </services>
+    </device>
+    <device id="60" name="n60" icon="/home/ee597/EE597_SWIPT/icons/zebra.jpeg" type="PC" class="" image="">
+      <position x="976" y="785" lat="47.57795444370553" lon="-122.13052758818174" alt="2.0"/>
+      <services>
+        <service name="DefaultRoute"/>
+      </services>
+    </device>
+    <device id="61" name="n61" icon="/home/ee597/EE597_SWIPT/icons/zebra.jpeg" type="PC" class="" image="">
+      <position x="19" y="79" lat="47.57795444370553" lon="-122.13052758818174" alt="2.0"/>
+      <services>
+        <service name="DefaultRoute"/>
+      </services>
+    </device>
+    <device id="62" name="n62" icon="/home/ee597/EE597_SWIPT/icons/zebra.jpeg" type="PC" class="" image="">
+      <position x="690" y="732" lat="47.57795444370553" lon="-122.13052758818174" alt="2.0"/>
+      <services>
+        <service name="DefaultRoute"/>
+      </services>
+    </device>
+    <device id="63" name="n63" icon="/home/ee597/EE597_SWIPT/icons/zebra.jpeg" type="PC" class="" image="">
+      <position x="23" y="850" lat="47.57795444370553" lon="-122.13052758818174" alt="2.0"/>
+      <services>
+        <service name="DefaultRoute"/>
+      </services>
+    </device>
+    <device id="64" name="n64" icon="/home/ee597/EE597_SWIPT/icons/zebra.jpeg" type="PC" class="" image="">
+      <position x="101" y="793" lat="47.57795444370553" lon="-122.13052758818174" alt="2.0"/>
+      <services>
+        <service name="DefaultRoute"/>
+      </services>
+    </device>
+    <device id="65" name="n65" icon="/home/ee597/EE597_SWIPT/icons/zebra.jpeg" type="PC" class="" image="">
+      <position x="709" y="793" lat="47.57795444370553" lon="-122.13052758818174" alt="2.0"/>
+      <services>
+        <service name="DefaultRoute"/>
+      </services>
+    </device>
+    <device id="66" name="n66" icon="/home/ee597/EE597_SWIPT/icons/zebra.jpeg" type="PC" class="" image="">
+      <position x="866" y="407" lat="47.57795444370553" lon="-122.13052758818174" alt="2.0"/>
+      <services>
+        <service name="DefaultRoute"/>
+      </services>
+    </device>
+    <device id="67" name="n67" icon="/home/ee597/EE597_SWIPT/icons/zebra.jpeg" type="PC" class="" image="">
+      <position x="985" y="218" lat="47.57795444370553" lon="-122.13052758818174" alt="2.0"/>
+      <services>
+        <service name="DefaultRoute"/>
+      </services>
+    </device>
+    <device id="68" name="n68" icon="/home/ee597/EE597_SWIPT/icons/zebra.jpeg" type="PC" class="" image="">
+      <position x="630" y="389" lat="47.57795444370553" lon="-122.13052758818174" alt="2.0"/>
+      <services>
+        <service name="DefaultRoute"/>
+      </services>
+    </device>
+    <device id="69" name="n69" icon="/home/ee597/EE597_SWIPT/icons/zebra.jpeg" type="PC" class="" image="">
+      <position x="9" y="660" lat="47.57795444370553" lon="-122.13052758818174" alt="2.0"/>
+      <services>
+        <service name="DefaultRoute"/>
+      </services>
+    </device>
+    <device id="70" name="n70" icon="/home/ee597/EE597_SWIPT/icons/zebra.jpeg" type="PC" class="" image="">
+      <position x="906" y="253" lat="47.57795444370553" lon="-122.13052758818174" alt="2.0"/>
+      <services>
+        <service name="DefaultRoute"/>
+      </services>
+    </device>
+
+
+
+
+
+
+  </devices>
+  <emane_global_configuration>
+    <emulator/>
+    <core>
+      <configuration name="platform_id_start" value="1"/>
+      <configuration name="nem_id_start" value="1"/>
+      <configuration name="link_enabled" value="1"/>
+      <configuration name="loss_threshold" value="30"/>
+      <configuration name="link_interval" value="1"/>
+      <configuration name="link_timeout" value="4"/>
+    </core>
+  </emane_global_configuration>
+  <session_origin lat="47.579166412353516" lon="-122.13232421875" alt="2.0" scale="20.0"/>
+  <session_options>
+    <configuration name="controlnet" value=""/>
+    <configuration name="controlnet0" value=""/>
+    <configuration name="controlnet1" value=""/>
+    <configuration name="controlnet2" value=""/>
+    <configuration name="controlnet3" value=""/>
+    <configuration name="controlnet_updown_script" value=""/>
+    <configuration name="enablerj45" value="1"/>
+    <configuration name="preservedir" value="0"/>
+    <configuration name="enablesdt" value="0"/>
+    <configuration name="sdturl" value="tcp://127.0.0.1:50000/"/>
+    <configuration name="ovs" value="0"/>
+  </session_options>
+  <session_metadata>
+    <configuration name="shapes" value="[]"/>
+    <configuration name="canvas" value="{&quot;wallpaper&quot;: null, &quot;wallpaper-style&quot;: 1, &quot;gridlines&quot;: true, &quot;fit_image&quot;: false, &quot;dimensions&quot;: [1100, 1100]}"/>
+  </session_metadata>
+  <default_services>
+    <node type="mdr">
+      <service name="zebra"/>
+      <service name="OSPFv3MDR"/>
+      <service name="IPForward"/>
+    </node>
+    <node type="PC">
+      <service name="DefaultRoute"/>
+    </node>
+    <node type="prouter"/>
+    <node type="router">
+      <service name="zebra"/>
+      <service name="OSPFv2"/>
+      <service name="OSPFv3"/>
+      <service name="IPForward"/>
+    </node>
+    <node type="host">
+      <service name="DefaultRoute"/>
+      <service name="SSH"/>
+    </node>
+  </default_services>
+</scenario>
