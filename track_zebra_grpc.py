@@ -13,13 +13,12 @@ import subprocess
 import threading
 import datetime
 
-from core.api.grpc import client
+from core.api.grpc import client, wrappers
 from core.api.grpc import core_pb2
-import xmlrpc.client
+from math import floor
 
-uavs = []
-mynodeseq = 0
-nodecnt = 0
+
+
 protocol = 'none'
 mcastaddr = '235.1.1.1'
 port = 9100
@@ -31,26 +30,58 @@ filepath = '/tmp'
 nodepath = ''
 
 thrdlock = threading.Lock()
-xmlproxy = xmlrpc.client.ServerProxy("http://localhost:8000", allow_none=True)
 
 class relay():
   def __init__(self, relay_id):
     self_relay_id = relay_id
 
 
-  def harness_solar(self):
+  #def harness_solar(self):
 
-  def calculate_SWIPT(self):
+  #def calculate_SWIPT(self):
 
 class sensor():
   def __init__(self, sensor_id):
-    self_sensor_id = sensor_id
+    self.sensor_id = sensor_id
+    self.get_closest_relay()
+    self.relay_id = self.closest_relay
+    self.link_relay()
+    #print("id: ",self.sensor_id, " closest relay:",self.relay_id)
 
-  def harness_swipt(self):
+  #def harness_swipt(self):
 
-  def send_data(self):
+  #def send_data(self):
 
-  def get_distance(self, relay):
+  #def get_distance(self, relay):
+
+  def get_closest_relay(self):
+    sense_node = core.get_node(session_id, self.sensor_id).node
+    x = sense_node.position.x
+    y = sense_node.position.y
+    x = math.floor(x/333.33)
+    y = math.floor(y/333.33)
+    self.closest_relay = x + 1 + 3*y
+
+  def link_relay(self):
+    node1 = core.get_node(session_id, self.sensor_id).node
+    node2 = core.get_node(session_id, self.relay_id).node
+    session = core.get_session(session_id).session
+    #print(type(session))
+    iface1 = iface_helper.create_iface(self.sensor_id, 0)
+    iface1 = iface_helper.create_iface(self.relay_id, 0)
+
+    #test = wrappers.Link()
+    #session.add_link(node1=node1, node2=node2, iface1=iface1, iface2 = iface2)
+    #core.add_link(session_id, node1=node1, node2=node2, iface1=iface1, iface2 = iface2)
+    #link = Link(sensor_id, relay_id, LinkType.WIRELESS, 10)
+    #result, iface1, iface2 = client.add_link(session_id, link)
+    
+    
+    
+    
+    
+    
+    
 
 
 class sink():
@@ -70,7 +101,8 @@ def main():
   global Sensors
   global core
   global session_id
-
+  global iface_helper
+  """
   # Get command line inputs 
   parser = argparse.ArgumentParser()
   parser.add_argument('-my','--my-id', dest = 'uav_id', metavar='my id',
@@ -84,13 +116,14 @@ def main():
   parser.add_argument('-p','--protocol', dest = 'protocol', metavar='comms protocol',
                       type=str, default = 'none', help='Comms Protocol')
 
-  
+ 
   # Parse command line options
   args = parser.parse_args()
 
   protocol = args.protocol
-
+  """
   # Create grpc client
+  iface_helper = client.InterfaceHelper(ip4_prefix="10.0.0.0/24", ip6_prefix="2001::/64")
   core = client.CoreGrpcClient("172.16.0.254:50051")
   core.connect()
   response = core.get_sessions()
@@ -98,42 +131,27 @@ def main():
     raise ValueError("no current core sessions")
   session_summary = response.sessions[0]
   session_id = int(session_summary.id)
+  print(session_id)
   session = core.get_session(session_id).session
+  nodes = core.get_node(session_id,2).node
+  print(nodes.position.x)
 
-  # Populate the uavs list with current UAV node information
-  mynodeseq = 0
-  node = CORENode(args.uav_id, -1)
-  uavs.append(node)
-  RedeployUAV(node)
-  RecordTarget(node)
-  nodecnt += 1
-  
-  if mynodeseq == -1:
-    print("Error: my id needs to be in the list of UAV IDs")
-    sys.exit()
-    
   # Initialize values
   corepath = "/tmp/pycore.*/"
   nodepath = glob.glob(corepath)[0]
-  msecinterval = float(args.interval)
-  secinterval = msecinterval/1000
-
-  if protocol == "udp":
-    # Create UDP receiving thread
-    recvthrd = ReceiveUDPThread()
-    recvthrd.start()
-        
-  # Start tracking targets
-  while 1:
-    time.sleep(secinterval)
-
-    if protocol == "udp":    
-      thrdlock.acquire()
-    
-    TrackTargets(args.covered_zone, args.track_range)
-
-    if protocol == "udp":
-      thrdlock.release()
+  #msecinterval = float(args.interval)
+  #secinterval = msecinterval/1000
+  print(type(core.get_session(session_id).session))
+  relays = []
+  sensors = []
+  for i in range(1,71):
+    if(i < 10):
+      relays.append(relay(i))
+    if i == 10:
+      sink = sink(i)
+    if i > 10:
+      sensors.append(sensor(i))
+   
 
 
 if __name__ == '__main__':
