@@ -16,7 +16,7 @@ import random
 
 from core.api.grpc import client, wrappers
 from core.api.grpc import core_pb2
-from core.api.grpc.wrappers import Position
+from core.api.grpc.wrappers import Position,NodeType
 from math import floor
 
 
@@ -31,13 +31,13 @@ session_id = None
 filepath = '/tmp'
 nodepath = ''
 
-thrdlock = threading.Lock()
+#thrdlock = threading.Lock()
 
 class relay():
   def __init__(self, relay_id,node):
     self.relay_id = relay_id
     self.node = node
-    self.iface = iface_helper.create_iface(relay_id, 0)
+    #self.iface = iface_helper.create_iface(relay_id, 0)
 
 
   #def harness_solar(self):
@@ -70,7 +70,7 @@ class sensor():
     
     node2 = relays[self.closest_relay -1].node
     iface1 = iface_helper.create_iface(self.sensor_id, 0)
-    iface2 = relays[self.closest_relay -1].iface
+    #iface2 = relays[self.closest_relay -1].iface
 
     #test = wrappers.Link()
     session.add_link(node1=self.node, node2=node2, iface1=iface1)
@@ -90,6 +90,13 @@ class sink():
   def __init__(self, sink_id,node):
     self.sink_id = sink_id
     self.node = node
+    self.link_relays()
+  def link_relays(self):
+    for i in range(0,9):
+      node2 = relays[i].node
+      iface1 = iface_helper.create_iface(self.sink_id, i)
+      session.add_link(node1=self.node, node2=node2,iface1=iface1)
+
 
 
   
@@ -141,7 +148,7 @@ def main():
     x = 166.66 + (i-1)%3 * 333.33
     y = 166.66 + math.floor((i-1)/3) * 333.33
     position = Position(x=x, y=y)
-    node = session.add_node(i, position=position)
+    node = session.add_node(i,model = "mdr",_type = NodeType.WIRELESS, position=position)
     node.icon = "/home/vboxuser/EE597_SWIPT/icons/relay.jpeg"
     node.canvas = 1
     node.name = "relay{}".format(i)
@@ -149,22 +156,26 @@ def main():
     
    #create sink
   position = Position(x=1000,y=1000)
-  node = session.add_node(10,position = position)
-  sink = sink(10,node)
+  node = session.add_node(10,model = "router", position = position)
   node.icon = "/home/vboxuser/EE597_SWIPT/icons/sink.jpg"
   node.name = "sink"
   node.canvas = 1
+  sink = sink(10,node)
+  
+  
+  
    
+
    #create wireless sensor nodes
   for i in range(11,71):
     x = random.randint(1,999)
     y = random.randint(1,999)
     position = Position(x=x, y=y)
     node = session.add_node(i,position = position)
-    sensors.append(sensor(i,node))
     node.icon = "/home/vboxuser/EE597_SWIPT/icons/zebra.jpeg"
     node.canvas = 1
     node.name = "s{}".format(i)
+    sensors.append(sensor(i,node))
   
   """
   # Initialize values
