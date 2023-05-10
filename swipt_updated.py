@@ -20,7 +20,6 @@ from core.api.grpc.wrappers import Position,NodeType
 from math import floor
 
 
-
 protocol = 'none'
 mcastaddr = '235.1.1.1'
 port = 9100
@@ -33,14 +32,49 @@ nodepath = ''
 
 #thrdlock = threading.Lock()
 
+
+solar_harvesting_efficiency  = .25
+SWIPT_energy_efficiency = .5
+eta = 3
+kref = 1
+
+
+def markov_chain():
+
+  num_states = 4
+  means = [94.6, 76.0, 45.6, 17.9]
+  variances = [0.31, 1.55, 1.48, 0.71]
+  transition_matrix = [[0.8, 0.1, 0.05, 0.05],
+                              [0.1, 0.8, 0.05, 0.05],
+                              [0.05, 0.05, 0.8, 0.1],
+                              [0.05, 0.05, 0.1, 0.8]]
+  markov_current_state =  random.choice(num_states, p=transition_matrix[current_state])
+  energy_harnessed = random.gauss(means[markov_current_state], np.sqrt(variances[current_state]))
+  return energy_harnessed * solar_harvesting_efficiency
+
+
 class relay():
   def __init__(self, relay_id,node):
     self.relay_id = relay_id
     self.node = node
+    self.sensors = []
+    self.battery = 0
+    self.transmit_power = 0
+    self.current_markov_state = 0
+    self.energy_harvested = 0
     #self.iface = iface_helper.create_iface(relay_id, 0)
 
-
-  #def harness_solar(self):
+  def harness_solar(self):
+    sum_states = 4
+    means = np.array([94.6, 76.0, 45.6, 17.9])
+    variances = np.array([0.31, 1.55, 1.48, 0.71])
+    transition_matrix = np.array([[0.8, 0.1, 0.05, 0.05],
+                              [0.1, 0.8, 0.05, 0.05],
+                              [0.05, 0.05, 0.8, 0.1],
+                              [0.05, 0.05, 0.1, 0.8]])
+    self.markov_current_state =  np.random.choice(num_states, p=transition_matrix[current_state])
+    energy_harnessed = np.random.normal(means[self.markov_current_state], np.sqrt(variances[self.current_state]))
+    self.battery = self.battery + energy_harnessed * solar_harvesting_efficiency
 
   #def calculate_SWIPT(self):
 
@@ -51,13 +85,25 @@ class sensor():
     self.get_closest_relay()
     self.relay_id = self.closest_relay
     self.link_relay()
+    self.power = 0
     #print("id: ",self.sensor_id, " closest relay:",self.relay_id)
 
-  #def harness_swipt(self):
+  def harness_swipt(self):
+    #get closest relay
+    self.get_closest_relay()
+    distance = get_distance(self.closest_relay)
+    transmit_power = relays[self.closest_relay - 1].transmit_power
+    power = transmit_power + kref - 10*log(distance)**eta
+    
 
   #def send_data(self):
 
-  #def get_distance(self, relay):
+  def get_distance(self, relay):
+    distance_x = abs(self.node.position.x - relays[relay - 1].node.position.x)
+    distance_y = abs(self.node.position.y - relays[relay - 1].node.position.y)
+    distance = sqrt(distance_x**2+ distance_y**2)/5 #distance in meters
+    return distance
+    
 
   def get_closest_relay(self):
     x = self.node.position.x
@@ -112,6 +158,7 @@ def main():
   global core
   global session
   global iface_helper
+
   """
   # Get command line inputs 
   parser = argparse.ArgumentParser()
